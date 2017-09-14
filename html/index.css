@@ -1,0 +1,78 @@
+* {
+	margin:0;
+	padding:0;
+	font-family:sans-serif;
+	top:0px;
+	bottom:0px;
+	overflow:hidden;
+}
+body {
+}
+.display { 
+	color:white;
+	display:block;
+	position:absolute;
+	text-align:center;
+	font-weight:bold;
+}
+#clock {
+	color:aqua;
+}
+.edit { 
+	display:block;
+	position:absolute;
+}
+.clocktable {
+	display:table;
+	height:100%;
+	width:100%;
+	border:0px solid black;
+	border-collapse:collapse;
+	margin:0px;
+	padding:0px;
+	
+}
+.width50{
+	width:50%;
+}
+.aligntotop{
+	vertical-align:top;
+}
+iframe {
+	height:100%;
+	width:100%;
+	border:0;
+}
+@media screen and (min-aspect-ratio: 16/10) and (max-aspect-ratio: 16/8) and (min-width:400px) {
+    .display {
+		z-index: 1;
+		left:0px;
+		right:0px;
+		cursor:none;
+	}
+	.edit {
+		z-index: -1;
+	}
+}
+@media screen and (max-aspect-ratio: 16/12), all and (max-width:400px) {
+	.display {
+		z-index: -1;
+		visibility: hidden;
+	}
+	.edit {
+		z-index: 1;
+		left:0px;
+		right:0px;
+	}
+}
+@media screen and (min-aspect-ratio: 16/8) and (min-width:400px), screen and (min-aspect-ratio: 16/12) and (max-aspect-ratio: 16/10) and (min-width:400px){
+    .display {
+		right:400px;
+		left:0px;
+	}
+	.edit {
+		position:fixed;
+		right:0px;
+		width:400px;
+	}
+}
